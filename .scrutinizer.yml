@@ -33,7 +33,6 @@ checks:
         psr2_class_declaration: false
         no_underscore_prefix_in_properties: false
         no_underscore_prefix_in_methods: false
-
 coding_style:
     php:
         spaces:
@@ -61,3 +60,18 @@ coding_style:
                 general: lower
             constants:
                 true_false_null: lower
+build_failure_conditions:
+    - 'elements.rating(<= D).new.exists'
+    - 'issues.label("complexity").new.exists'
+    - 'issues.label("unused-code").new.exists'
+    - 'issues.label("coding-style").new.exists'
+    - 'issues.label("security").new.exists'
+    - 'issues.label("comprehensibility").new.exists'
+    - 'issues.label("documentation").new.exists'
+    - 'issues.label("naming").new.exists'
+    - 'issues.label("bug").new.exists'
+    - 'issues.label("performance").new.exists'
+    - 'issues.label("deprecated-code").new.exists'
+    - 'issues.label("configuration").new.exists'
+    - 'issues.label("compatibility").new.exists'
+    - 'issues.label("debugging-code").new.exists'
